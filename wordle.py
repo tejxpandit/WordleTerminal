@@ -15,6 +15,14 @@ allwords = ww2.read().splitlines()
 print("WORDLE GAME: ")
 print("_ _ _ _ _ _ _ _")
 
+n = len(wordlewords)
+w = random.randint(0,n-1)
+selectedword = wordlewords[w]
+
+numberofguesses = 0
+while numberofguesses < 6:
+    
+
 if won:
     print("WORDLE COMPLETE:")
 else:
