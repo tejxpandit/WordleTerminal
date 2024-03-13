@@ -21,7 +21,18 @@ selectedword = wordlewords[w]
 
 numberofguesses = 0
 while numberofguesses < 6:
-    
+    guess = input()
+    if len(guess) <= 5:
+        if guess in allwords:
+            print(checkletters(guess, selectedword))
+            numberofguesses += 1
+        else:
+            print("not a word!")
+    else:
+        print("word too long!")
+
+    if won:
+        break
 
 if won:
     print("WORDLE COMPLETE:")
