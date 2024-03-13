@@ -18,7 +18,9 @@ def checkletters(g, w):
             letter = guess[l].upper()
             letter_flag = 2
             numbercorrect += 1
-        
+        else:
+            letter = guess[l].lower()
+            letter_flag = 1
 
 ww1 = open("wordle-words.txt", "r")
 wordlewords = ww1.read().splitlines()
