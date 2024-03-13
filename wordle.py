@@ -25,6 +25,11 @@ def checkletters(g, w):
             else:
                 letter = "_"
                 letter_flag = 0
+        result += letter
+        remainingletters(guess[l].lower(), letter_flag)
+
+        if numbercorrect >= 5:
+            won = True
 
 ww1 = open("wordle-words.txt", "r")
 wordlewords = ww1.read().splitlines()
