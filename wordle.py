@@ -7,6 +7,10 @@ import string
 won = False
 alphabets = list(string.ascii_lowercase)
 
+def remainingletters(letter, flag):
+    #flag: 0=not_in_word, 1=in_word, 2=correct_position
+    global alphabets
+
 def checkletters(g, w):
     global won
     letter_flag = 0 #flag: 0=not_in_word, 1=in_word, 2=correct_position
