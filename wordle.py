@@ -16,7 +16,8 @@ def remainingletters(letter, flag):
             alphabets[idx] = letter.upper()
         elif flag == 1:
             alphabets[idx] = letter
-        
+        elif flag == 0:
+            del alphabets[idx]
 
 def checkletters(g, w):
     global won
