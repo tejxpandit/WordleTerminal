@@ -10,6 +10,13 @@ alphabets = list(string.ascii_lowercase)
 def remainingletters(letter, flag):
     #flag: 0=not_in_word, 1=in_word, 2=correct_position
     global alphabets
+    if letter in alphabets:
+        idx = alphabets.index(letter)
+        if flag == 2:
+            alphabets[idx] = letter.upper()
+        elif flag == 1:
+            alphabets[idx] = letter
+        
 
 def checkletters(g, w):
     global won
