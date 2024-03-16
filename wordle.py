@@ -7,6 +7,13 @@ import string
 won = False
 alphabets = list(string.ascii_lowercase)
 
+def remainingstring():
+    global alphabets
+    rem = "  remaining letters: "
+    for l in alphabets:
+        rem += l
+    return rem
+
 def remainingletters(letter, flag):
     #flag: 0=not_in_word, 1=in_word, 2=correct_position
     global alphabets
