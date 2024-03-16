@@ -1,5 +1,5 @@
 # Project : Wordle
-# Author : Tej Pandit
+# Author : Tej
 
 import random
 import string
@@ -26,9 +26,11 @@ def remainingletters(letter, flag):
         elif flag == 0:
             del alphabets[idx]
 
+
 def checkletters(g, w):
     global won
     letter_flag = 0 #flag: 0=not_in_word, 1=in_word, 2=correct_position
+    numbercorrect = 0
     guess = list(g)
     word = list(w)
     result = ""
@@ -49,6 +51,9 @@ def checkletters(g, w):
 
         if numbercorrect >= 5:
             won = True
+
+    result += remainingstring()
+    return result
 
 ww1 = open("wordle-words.txt", "r")
 wordlewords = ww1.read().splitlines()
